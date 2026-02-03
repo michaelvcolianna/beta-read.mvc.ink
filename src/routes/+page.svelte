@@ -317,24 +317,6 @@
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         <Testimonial>
           {#snippet quote()}
-            When I tell you that I cried my eyes out, please know that very few books have ever done
-            that. I’ve got a very high tolerance for grief and sadness. Your story will haunt me for
-            months, and I can't believe this is just the first draft.
-          {/snippet}
-
-          {#snippet author()}
-            <a href="https://bsky.app/profile/juliebihn.bsky.social" class="underline"
-              >@juliebihn.bsky.social</a
-            >, author of <em>Titanic Voyage</em>
-          {/snippet}
-
-          {#snippet role()}
-            For <em>Fragile Gamete of Resistance</em>
-          {/snippet}
-        </Testimonial>
-
-        <Testimonial>
-          {#snippet quote()}
             Holy crap, man. Are you okay? Because that ending really worries me. I mean... it’s
             phenomenal. But you should see a therapist.
           {/snippet}
@@ -355,22 +337,6 @@
 
           {#snippet author()}
             Creigh Maxfield, reader
-          {/snippet}
-
-          {#snippet role()}
-            For <em>Fractured Children of Earth</em>
-          {/snippet}
-        </Testimonial>
-
-        <Testimonial>
-          {#snippet quote()}
-            MVC writes with the wonder of Chambers and the heart of Le Guin. This is science fiction
-            at its finest.
-          {/snippet}
-
-          {#snippet author()}
-            <a href="https://kadoore.com/" class="underline">K.A. Doore</a>, author of
-            <em>The Chronicles of Ghadid</em>
           {/snippet}
 
           {#snippet role()}
