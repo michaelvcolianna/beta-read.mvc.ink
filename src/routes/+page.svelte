@@ -227,7 +227,13 @@
             </p>
           </div>
 
-          <form onsubmit={handleSubmit} class="space-y-6">
+          <form
+            data-netlify="true"
+            name="betaReadSignup"
+            method="post"
+            onsubmit={handleSubmit}
+            class="space-y-6"
+          >
             <TextInput label="Name" id="name" type="text" placeholder="Your name" required />
 
             <TextInput
