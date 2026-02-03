@@ -18,7 +18,7 @@
 
 <a
   {href}
-  class="group flex items-center gap-3 rounded-full bg-card px-5 py-3 transition-all hover:scale-105 hover:bg-primary"
+  class="group flex items-center gap-3 rounded-full bg-card px-5 py-3 transition-all border-2 border-primary hover:scale-105 hover:bg-primary"
 >
   <Icon class="h-5 w-5 text-primary transition-colors group-hover:text-primary-foreground" />
 

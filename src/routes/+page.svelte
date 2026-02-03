@@ -18,6 +18,10 @@
   let submitted = $state(false);
 </script>
 
+<svelte:head>
+  <title>Beta Readers Needed: Fragile Gamete of Resistance by Michael V. Colianna</title>
+</svelte:head>
+
 <main class="min-h-screen bg-background">
   <section class="relative w-full overflow-hidden hero-gradient">
     <HeroBackground />
@@ -25,8 +29,11 @@
     <div class="relative section-container py-8 md:py-16">
       <figure class="relative overflow-hidden rounded-lg md:rounded-2xl">
         <img
-          src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/"
+          src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x468"
           alt="Illustration by Jaroslaw Marcinek"
+          fetchpriority="high"
+          height="468"
+          width="824"
           class="hidden aspect-video h-auto w-full object-cover md:block"
         />
 
