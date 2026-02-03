@@ -372,7 +372,7 @@
           <article
             class={[
               'prose prose-lg space-y-4 overflow-hidden text-foreground/90 transition-all duration-500',
-              expanded && 'max-h-504',
+              expanded && 'max-h-850 md:max-h-680 lg:max-h-510',
               !expanded && 'max-h-64'
             ]}
           >
