@@ -541,14 +541,14 @@
         <div class="space-y-3 text-sm text-muted-foreground">
           <p>
             Your privacy matters. Information submitted through this site is used solely by MVC to
-            communicate directly with you about this book. Your data is never sold, shared, or used
-            for marketing purposes.
+            communicate directly with you about this book. Your data is never saved to any
+            third-party database, sold, shared, or used for marketing purposes.
           </p>
 
           <p>
             Once you complete your beta read, your information will be deleted, unless otherwise
             specified by you. By submitting the form, you consent to receiving direct communication
-            from MVC regarding your advance reader copy request.
+            from MVC regarding your beta reader copy request.
           </p>
         </div>
 
