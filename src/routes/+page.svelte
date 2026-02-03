@@ -20,6 +20,10 @@
 
 <svelte:head>
   <title>Beta Readers Needed: Fragile Gamete of Resistance by Michael V. Colianna</title>
+  <meta
+    name="description"
+    content="Information and signup form to beta read Michael V. Colianna’s book, “Fragile Gamete of Resistance”."
+  />
 </svelte:head>
 
 <main class="min-h-screen bg-background">
