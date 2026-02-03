@@ -283,6 +283,8 @@
               >
             </p>
 
+            <input type="hidden" name="form-name" value="betaReadSignup" />
+
             <button
               type="submit"
               class="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-6 text-sm font-medium whitespace-nowrap text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
