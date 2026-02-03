@@ -3,6 +3,7 @@
   import BookInfo from '$lib/components/BookInfo.svelte';
   import ContentWarning from '$lib/components/ContentWarning.svelte';
   import IconChevronDown from '$lib/components/Icons/ChevronDown.svelte';
+  import SocialLink from '$lib/components/SocialLink.svelte';
 
   let submitted = $state(false);
 </script>
@@ -116,31 +117,35 @@
 
   <section class="w-full py-12 md:py-16">
     <div class="section-container text-center">
-      <h2>Connect with MVC</h2>
+      <h2 class="mb-3 font-display text-2xl font-semibold text-foreground md:text-3xl">
+        Connect with MVC
+      </h2>
 
-      <p>Get in contact to read, or use the form below.</p>
+      <p class="mb-8 text-muted-foreground">Get in contact to read, or use the form below.</p>
 
-      <div>
-        <!-- @todo Make these a component -->
-        <a href="/">
-          <!-- @todo Bluesky icon -->
-          <span>Connect on Bluesky</span>
-        </a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <SocialLink
+          help="Connect on Bluesky"
+          href="https://bsky.app/profile/mvc.ink"
+          icon="bluesky"
+          label="Bluesky"
+        />
 
-        <a href="/">
-          <!-- @todo Discord icon -->
-          <span>Connect on Discord</span>
-        </a>
+        <SocialLink
+          help="Connect on Discord"
+          href="http://discord.com/users/740751379571933265"
+          icon="discord"
+          label="Discord"
+        />
 
-        <a href="/">
-          <!-- @todo Web icon -->
-          <span>Visit MVC's Website</span>
-        </a>
+        <SocialLink
+          help="Visit MVC's Website"
+          href="https://mvc.ink"
+          icon="globe"
+          label="Website"
+        />
 
-        <a href="/">
-          <!-- @todo Email icon -->
-          <span>Send MVC an Email</span>
-        </a>
+        <SocialLink help="Send MVC an Email" href="mailto:info@mvc.ink" icon="mail" label="Email" />
       </div>
     </div>
   </section>
@@ -423,9 +428,9 @@
           </p>
 
           <p>
-            Once your request is fulfilled, your information will be deleted unless you explicitly
-            opt in to future updates. By submitting the form, you consent to receiving direct
-            communication from MVC regarding your advance reader copy request.
+            Once you complete your beta read, your information will be deleted, unless otherwise
+            specified by you. By submitting the form, you consent to receiving direct communication
+            from MVC regarding your advance reader copy request.
           </p>
         </div>
 
