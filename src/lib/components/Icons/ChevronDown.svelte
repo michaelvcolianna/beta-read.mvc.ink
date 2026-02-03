@@ -12,5 +12,5 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  class={props.class}><path d="M12 6v6l4 2" /><circle cx="12" cy="12" r="10" /></svg
+  class={props.class}><path d="m6 9 6 6 6-6" /></svg
 >

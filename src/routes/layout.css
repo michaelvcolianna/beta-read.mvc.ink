@@ -5,75 +5,75 @@
 @import 'tailwindcss';
 
 @theme {
-	--font-display: 'Space Grotesk', system-ui, sans-serif;
-	--font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 
-	--color-border: hsl(260 20% 90%);
-	--color-input: hsl(260 20% 92%);
-	--color-ring: hsl(260 60% 65%);
-	--color-background: hsl(45 40% 97%);
-	--color-foreground: hsl(250 30% 20%);
+  --color-border: hsl(260 20% 90%);
+  --color-input: hsl(260 20% 92%);
+  --color-ring: hsl(260 60% 65%);
+  --color-background: hsl(45 40% 97%);
+  --color-foreground: hsl(250 30% 20%);
 
-	--color-primary: hsl(260 60% 65%);
-	--color-primary-foreground: hsl(0 0% 100%);
+  --color-primary: hsl(260 60% 65%);
+  --color-primary-foreground: hsl(0 0% 100%);
 
-	--color-secondary: hsl(165 50% 88%);
-	--color-secondary-foreground: hsl(165 40% 25%);
+  --color-secondary: hsl(165 50% 88%);
+  --color-secondary-foreground: hsl(165 40% 25%);
 
-	--color-destructive: hsl(0 70% 60%);
-	--color-destructive-foreground: hsl(0 0% 100%);
+  --color-destructive: hsl(0 70% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
 
-	--color-muted: hsl(260 20% 94%);
-	--color-muted-foreground: hsl(250 15% 45%);
+  --color-muted: hsl(260 20% 94%);
+  --color-muted-foreground: hsl(250 15% 45%);
 
-	--color-accent: hsl(15 85% 75%);
-	--color-accent-foreground: hsl(15 60% 25%);
+  --color-accent: hsl(15 85% 75%);
+  --color-accent-foreground: hsl(15 60% 25%);
 
-	--color-highlight: hsl(175 60% 70%);
-	--color-highlight-foreground: hsl(175 50% 20%);
+  --color-highlight: hsl(175 60% 70%);
+  --color-highlight-foreground: hsl(175 50% 20%);
 
-	--color-popover: hsl(0 0% 100%);
-	--color-popover-foreground: hsl(250 30% 20%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(250 30% 20%);
 
-	--color-card: hsl(260 30% 98%);
-	--color-card-foreground: hsl(250 30% 20%);
+  --color-card: hsl(260 30% 98%);
+  --color-card-foreground: hsl(250 30% 20%);
 
-	--gradient-hero: linear-gradient(
-		135deg,
-		hsl(260 60% 65% / 0.15) 0%,
-		hsl(175 60% 70% / 0.15) 50%,
-		hsl(15 85% 75% / 0.15) 100%
-	);
-	--gradient-accent: linear-gradient(135deg, hsl(260 60% 65%) 0%, hsl(280 55% 70%) 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(260 60% 65% / 0.15) 0%,
+    hsl(175 60% 70% / 0.15) 50%,
+    hsl(15 85% 75% / 0.15) 100%
+  );
+  --gradient-accent: linear-gradient(135deg, hsl(260 60% 65%) 0%, hsl(280 55% 70%) 100%);
 }
 
 @layer base {
-	body {
-		@apply bg-background text-foreground;
-		font-family: var(--font-body);
-	}
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: var(--font-display);
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
 }
 
 @utility hero-gradient {
-	background: var(--gradient-hero);
+  background: var(--gradient-hero);
 }
 
 @utility section-container {
-	@apply mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8;
 }
 
 @utility text-gradient {
-	background: var(--gradient-accent);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
