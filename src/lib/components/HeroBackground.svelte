@@ -64,8 +64,8 @@
           particle.y,
           particle.size * 2
         );
-        gradient.addColorStop(0, `hsla(260, 60%, 80%, ${particle.opacity})`);
-        gradient.addColorStop(0.5, `hsla(175, 60%, 75%, ${particle.opacity * 0.5})`);
+        gradient.addColorStop(0, `hsla(260, 60%, 80%, ${particle.opacity * 2})`);
+        gradient.addColorStop(0.5, `hsla(175, 60%, 75%, ${particle.opacity * 1.5})`);
         gradient.addColorStop(1, 'transparent');
 
         // Outer particle
