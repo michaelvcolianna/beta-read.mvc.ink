@@ -29,17 +29,21 @@
     <div class="relative section-container py-8 md:py-16">
       <figure class="relative overflow-hidden rounded-lg md:rounded-2xl">
         <img
-          src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x468"
+          sizes="(max-width: 824px) 100vw, 824px"
+          srcset="
+            https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/200x0 200w,
+            https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/498x0 498w,
+            https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/698x0 698w,
+            https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x0 824w"
+          src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x0"
           alt="Illustration by Jaroslaw Marcinek"
           fetchpriority="high"
-          height="468"
+          height="458"
           width="824"
           class="hidden aspect-video h-auto w-full object-cover md:block"
         />
 
-        <figcaption
-          class="text-center md:p-6 md:bg-foreground"
-        >
+        <figcaption class="text-center md:bg-foreground md:p-6">
           <p class="text-sm font-medium text-foreground md:text-base md:text-primary-foreground">
             BETA READERS NEEDED
           </p>
