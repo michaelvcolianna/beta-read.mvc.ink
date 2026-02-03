@@ -9,8 +9,8 @@
   import RadioInput from '$lib/components/RadioInput.svelte';
   import RequiredStar from '$lib/components/RequiredStar.svelte';
   import SocialLink from '$lib/components/SocialLink.svelte';
+  import Testimonial from '$lib/components/Testimonial.svelte';
   import TextInput from '$lib/components/TextInput.svelte';
-  import CircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
 
   let checked = $state('');
   let submitted = $state(false);
@@ -86,8 +86,8 @@
           <p>
             But there seems to be no end to the bad news. Mary and Davi keep getting hit while they
             are down. Nobody else wants to stand up and fight back. And that’s before they have a
-            huge fight. Everyone has a limit, and the stress is causing them to take it out on one
-            another – as well as on themselves. Defeating the Gaians will bring them both to the
+            huge argument. Everyone has a limit, and the stress is causing them to take it out on
+            one another – as well as on themselves. Defeating the Gaians will bring them both to the
             breaking point, <strong>and neither is confident they’ll hold strong</strong>.
           </p>
         </div>
@@ -258,90 +258,81 @@
 
   <section class="w-full bg-card py-12 md:py-20">
     <div class="section-container">
-      <div>
-        <h2>Praise &amp: Reactions</h2>
+      <div class="mb-10 text-center md:mb-14">
+        <h2 class="mb-3 font-display text-2xl font-semibold text-foreground md:text-3xl">
+          Praise &amp; Reactions
+        </h2>
 
-        <p>
+        <p class="text-muted-foreground">
           Some things others readers have said about their beta read, or about MVC’s first book, <a
             href="/">Fractured Children or Earth</a
           >.
         </p>
       </div>
 
-      <div>
-        <!-- @todo Make these a component -->
-        <article>
-          <!-- @todo Quote icon -->
-          <blockquote>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <Testimonial>
+          {#snippet quote()}
             When I tell you that I cried my eyes out, please know that very few books have ever done
             that. I’ve got a very high tolerance for grief and sadness. Your story will haunt me for
-            months, and I can't wait to see it published.
-          </blockquote>
+            months, and I can't believe this is just the first draft.
+          {/snippet}
 
-          <footer>
-            <div>
-              <cite
-                ><a href="https://bsky.app/profile/juliebihn.bsky.social">@juliebihn.bsky.social</a
-                >, author of <em>Titanic Voyage</em></cite
-              >
+          {#snippet author()}
+            <a href="https://bsky.app/profile/juliebihn.bsky.social" class="underline"
+              >@juliebihn.bsky.social</a
+            >, author of <em>Titanic Voyage</em>
+          {/snippet}
 
-              <p>For <em>Fragile Gamete of Resistance</em></p>
-            </div>
-          </footer>
-        </article>
+          {#snippet role()}
+            For <em>Fragile Gamete of Resistance</em>
+          {/snippet}
+        </Testimonial>
 
-        <article>
-          <!-- @todo Quote icon -->
-
-          <blockquote>
+        <Testimonial>
+          {#snippet quote()}
             Holy crap, man. Are you okay? Because that ending really worries me. I mean... it’s
             phenomenal. But you should see a therapist.
-          </blockquote>
+          {/snippet}
 
-          <footer>
-            <div>
-              <cite>bookish_nova (Discord), reader</cite>
+          {#snippet author()}
+            bookish_nova (Discord), reader
+          {/snippet}
 
-              <p>For <em>Fragile Gamete of Resistance</em></p>
-            </div>
-          </footer>
-        </article>
+          {#snippet role()}
+            For <em>Fragile Gamete of Resistance</em>
+          {/snippet}
+        </Testimonial>
 
-        <article>
-          <!-- @todo Quote icon -->
-
-          <blockquote>
+        <Testimonial>
+          {#snippet quote()}
             You’re a very good writer, but this was way too woke for me to read.
-          </blockquote>
+          {/snippet}
 
-          <footer>
-            <div>
-              <cite>Creigh Maxfield, reader</cite>
+          {#snippet author()}
+            Creigh Maxfield, reader
+          {/snippet}
 
-              <p>For <em>Fractured Children of Earth</em></p>
-            </div>
-          </footer>
-        </article>
+          {#snippet role()}
+            For <em>Fractured Children of Earth</em>
+          {/snippet}
+        </Testimonial>
 
-        <article>
-          <!-- @todo Quote icon -->
-
-          <blockquote>
+        <Testimonial>
+          {#snippet quote()}
             MVC writes with the wonder of Chambers and the heart of Le Guin. This is science fiction
             at its finest.
-          </blockquote>
+          {/snippet}
 
-          <footer>
-            <div>
-              <cite
-                ><a href="https://kadoore.com/">K.A. Doore</a>, author of
-                <em>The Chronicles of Ghadid</em> trilogy</cite
-              >
+          {#snippet author()}
+            <a href="https://kadoore.com/" class="underline">K.A. Doore</a>, author of
+            <em>The Chronicles of Ghadid</em>
+          {/snippet}
 
-              <p>For <em>Fractured Children of Earth</em></p>
-            </div>
-          </footer>
-        </article>
+          {#snippet role()}
+            For <em>Fractured Children of Earth</em>
+          {/snippet}
+        </Testimonial>
       </div>
     </div>
   </section>
@@ -361,11 +352,11 @@
           <!-- @todo Expanded/contracted states -->
           <article>
             <p>
-              This discussion suddenly reminded Davi of the coffee contract fight that made the five
-              members of the Vinillense quit. As well, it drew some similarity to his argument with
-              Mary where she almost hit him. Anger clouded his judgment both times, and though
-              Puccar’s stubborn refusal to help burned him like a grenade bolt, he somehow wrangled
-              his emotions.
+              This discussion reminded Davi of the coffee contract fight that made five members of
+              the Vinillense quit. As well, it drew some similarity to his argument with Mary where
+              she almost hit him. Anger clouded his judgment both times, and though Puccar’s
+              stubborn refusal to help burned him like a grenade bolt, he somehow wrangled his
+              emotions.
             </p>
 
             <p>
