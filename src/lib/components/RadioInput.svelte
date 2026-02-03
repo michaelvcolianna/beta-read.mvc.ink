@@ -11,7 +11,6 @@
     class="aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
     type="button"
     role="radio"
-    data-state={checked === value ? 'checked' : 'unchecked'}
     aria-checked={checked === value}
     aria-label={label}
     {value}

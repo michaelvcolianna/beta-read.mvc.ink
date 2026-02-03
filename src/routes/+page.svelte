@@ -13,9 +13,28 @@
   import Testimonial from '$lib/components/Testimonial.svelte';
   import TextInput from '$lib/components/TextInput.svelte';
 
-  let checked = $state('');
+  let checked = $state('gdocs');
   let expanded = $state(false);
   let submitted = $state(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (globalThis.Netlify) {
+      const form = event.target;
+      const formData = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(() => (submitted = true))
+        .catch((error) => console.log('form submit error:', error));
+    } else {
+      submitted = true;
+    }
+  };
 </script>
 
 <svelte:head>
@@ -208,8 +227,7 @@
             </p>
           </div>
 
-          <!-- @todo Netlify formify -->
-          <form class="space-y-6">
+          <form onsubmit={handleSubmit} class="space-y-6">
             <TextInput label="Name" id="name" type="text" placeholder="Your name" required />
 
             <TextInput
@@ -244,7 +262,7 @@
                 <RadioInput value="other" label="Other (specify in field below)" bind:checked />
               </div>
 
-              <input type="hidden" id="delivery" value={checked} />
+              <input type="hidden" name="delivery" value={checked} />
             </div>
 
             <div class="space-y-2">
@@ -252,6 +270,7 @@
 
               <textarea
                 id="about"
+                name="about"
                 placeholder="Are you a reviewer, blogger, or just a sci-fi enthusiast? Tell me a bit about yourself! (Optional)"
                 rows="4"
                 class="flex min-h-20 w-full resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
@@ -554,7 +573,14 @@
         </div>
 
         <div class="mt-8 border-t border-border pt-6 text-xs text-muted-foreground">
-          <p>© 2026 MVC. All rights reserved.</p>
+          <p>
+            © 2026 MVC. All rights reserved. <span class="hidden md:inline"
+              >Header image by <a
+                href="https://www.artstation.com/yaroslavus"
+                class="font-medium underline">Jaroslaw Marcinek</a
+              >.</span
+            >
+          </p>
         </div>
       </div>
     </div>
