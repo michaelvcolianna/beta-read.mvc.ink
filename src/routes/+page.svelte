@@ -317,6 +317,20 @@
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         <Testimonial>
           {#snippet quote()}
+            You’re a very good writer, but this was way too woke for me to read.
+          {/snippet}
+
+          {#snippet author()}
+            Creigh Maxfield, reader
+          {/snippet}
+
+          {#snippet role()}
+            For <em>Fractured Children of Earth</em>
+          {/snippet}
+        </Testimonial>
+
+        <Testimonial>
+          {#snippet quote()}
             Holy crap, man. Are you okay? Because that ending really worries me. I mean... it’s
             phenomenal. But you should see a therapist.
           {/snippet}
@@ -327,20 +341,6 @@
 
           {#snippet role()}
             For <em>Fragile Gamete of Resistance</em>
-          {/snippet}
-        </Testimonial>
-
-        <Testimonial>
-          {#snippet quote()}
-            You’re a very good writer, but this was way too woke for me to read.
-          {/snippet}
-
-          {#snippet author()}
-            Creigh Maxfield, reader
-          {/snippet}
-
-          {#snippet role()}
-            For <em>Fractured Children of Earth</em>
           {/snippet}
         </Testimonial>
       </div>
