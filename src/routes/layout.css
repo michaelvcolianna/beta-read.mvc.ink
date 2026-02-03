@@ -4,6 +4,7 @@
 @import '@fontsource/space-grotesk/700.css' layer(base);
 @import '@fontsource/inter/400.css' layer(base);
 @import '@fontsource/inter/500.css' layer(base);
+@import '@fontsource/inter/700.css' layer(base);
 @import 'tailwindcss';
 
 @theme {
