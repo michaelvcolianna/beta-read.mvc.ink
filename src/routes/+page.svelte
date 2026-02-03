@@ -3,6 +3,7 @@
   import BookInfo from '$lib/components/BookInfo.svelte';
   import ContentWarning from '$lib/components/ContentWarning.svelte';
   import FieldLabel from '$lib/components/FieldLabel.svelte';
+  import HeroBackground from '$lib/components/HeroBackground.svelte';
   import IconChevronDown from '$lib/components/Icons/ChevronDown.svelte';
   import IconCircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
   import IconSendHorizontal from '$lib/components/Icons/SendHorizontal.svelte';
@@ -19,18 +20,22 @@
 
 <main class="min-h-screen bg-background">
   <section class="relative w-full overflow-hidden hero-gradient">
-    <!-- @todo Canvas with animation as bg -->
+    <HeroBackground />
+
     <div class="relative section-container py-8 md:py-16">
-      <figure>
-        <!-- @todo Hide image on mobile, only show figcaption & bg -->
+      <figure class="relative overflow-hidden rounded-lg md:rounded-2xl">
         <img
           src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/"
           alt="Illustration by Jaroslaw Marcinek"
           class="hidden aspect-video h-auto w-full object-cover md:block"
         />
 
-        <figcaption>
-          <p>BETA READERS NEEDED</p>
+        <figcaption
+          class="text-center md:p-6 md:bg-foreground"
+        >
+          <p class="text-sm font-medium text-foreground md:text-base md:text-primary-foreground">
+            BETA READERS NEEDED
+          </p>
         </figcaption>
       </figure>
     </div>
