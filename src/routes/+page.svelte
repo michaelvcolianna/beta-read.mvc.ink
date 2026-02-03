@@ -20,20 +20,16 @@
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (globalThis.Netlify) {
-      const form = event.target;
-      const formData = new FormData(form);
+    const form = event.target;
+    const formData = new FormData(form);
 
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => (submitted = true))
-        .catch((error) => console.log('form submit error:', error));
-    } else {
-      submitted = true;
-    }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => (submitted = true))
+      .catch((error) => console.log('form submit error:', error));
   };
 </script>
 
