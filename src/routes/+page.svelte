@@ -2,9 +2,17 @@
   import './layout.css';
   import BookInfo from '$lib/components/BookInfo.svelte';
   import ContentWarning from '$lib/components/ContentWarning.svelte';
+  import FieldLabel from '$lib/components/FieldLabel.svelte';
   import IconChevronDown from '$lib/components/Icons/ChevronDown.svelte';
+  import IconCircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
+  import IconSendHorizontal from '$lib/components/Icons/SendHorizontal.svelte';
+  import RadioInput from '$lib/components/RadioInput.svelte';
+  import RequiredStar from '$lib/components/RequiredStar.svelte';
   import SocialLink from '$lib/components/SocialLink.svelte';
+  import TextInput from '$lib/components/TextInput.svelte';
+  import CircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
 
+  let checked = $state('');
   let submitted = $state(false);
 </script>
 
@@ -153,107 +161,93 @@
   <section class="w-full bg-card py-12 md:py-20">
     <div class="section-container">
       {#if submitted}
-        <div>
-          <div>
-            <!-- @todo Checkmark icon -->
+        <div class="mx-auto max-w-md py-12 text-center">
+          <div
+            class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-highlight/20"
+          >
+            <IconCircleCheckBig class="h-8 w-8 text-highlight" />
           </div>
 
-          <h2>Request Received!</h2>
+          <h2 class="mb-3 font-display text-2xl font-semibold text-foreground">
+            Submission Received!
+          </h2>
 
-          <p>Thank you! MVC will be in touch soon with your copy.</p>
+          <p class="text-muted-foreground">Thank you! MVC will be in touch soon!</p>
         </div>
       {:else}
-        <div>
-          <div>
-            <h2>Sign up to Beta Read</h2>
+        <div class="mx-auto max-w-md">
+          <div class="mb-10 text-center">
+            <h2 class="mb-3 font-display text-2xl font-semibold text-foreground md:text-3xl">
+              Sign up to Beta Read
+            </h2>
 
-            <p>Interested in being a beta reader? Fill out the form below.</p>
+            <p class="text-muted-foreground">
+              Interested in being a beta reader but unable to connect via the options above? Fill
+              out the following form.
+            </p>
           </div>
 
           <!-- @todo Netlify formify -->
-          <form>
-            <!-- @todo Make text/email fields a component -->
-            <div>
-              <label for="name">Name <span aria-label="(Required)">*</span></label>
+          <form class="space-y-6">
+            <TextInput label="Name" id="name" type="text" placeholder="Your name" required />
 
-              <input id="name" type="text" placeholder="Your name" required />
-            </div>
+            <TextInput
+              label="Email"
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
 
-            <div>
-              <label for="email">Email <span aria-label="(Required)">*</span></label>
+            <TextInput
+              label="Pronouns"
+              id="pronouns"
+              type="text"
+              placeholder="e.g., she/her, they/them (Optional)"
+            />
 
-              <input id="email" type="email" placeholder="you@example.com" required />
-            </div>
-
-            <div>
-              <label for="pronouns">Pronouns</label>
-
-              <input id="pronouns" type="text" placeholder="e.g., she/her, they/them (Optional)" />
-            </div>
-
-            <div>
-              <div>
-                Preferred Way To Read &amp; Comment <span aria-label="(Required)">*</span>
+            <div class="space-y-3">
+              <div
+                class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Preferred Way To Read &amp; Comment <RequiredStar />
               </div>
 
-              <div role="radiogroup" aria-required="true">
-                <label>
-                  <button
-                    type="button"
-                    role="radio"
-                    aria-checked="false"
-                    aria-label="Google Docs"
-                    value="gdocs"
-                    id="delivery-gdocs"
-                  ></button>
-                  <input type="radio" aria-hidden="true" required value="gdocs" />
-                  <span>Google Docs</span>
-                </label>
+              <div role="radiogroup" aria-required="true" class="flex flex-col gap-3">
+                <RadioInput value="gdocs" label="Google Docs" bind:checked />
 
-                <label>
-                  <button
-                    type="button"
-                    role="radio"
-                    aria-checked="false"
-                    aria-label="PDF"
-                    value="pdf"
-                    id="delivery-pdf"
-                  ></button>
-                  <input type="radio" aria-hidden="true" required value="pdf" />
-                  <span>PDF</span>
-                </label>
+                <RadioInput value="pdf" label="PDF" bind:checked />
 
-                <label>
-                  <button
-                    type="button"
-                    role="radio"
-                    aria-checked="false"
-                    aria-label="Word Doc"
-                    value="word"
-                    id="delivery-word"
-                  ></button>
-                  <input type="radio" aria-hidden="true" required value="word" />
-                  <span>Word Doc</span>
-                </label>
+                <RadioInput value="word" label="Word Doc" bind:checked />
+
+                <RadioInput value="other" label="Other (specify in field below)" bind:checked />
               </div>
+
+              <input type="hidden" id="delivery" value={checked} />
             </div>
 
-            <div>
-              <label for="about">What made you want to read?</label>
+            <div class="space-y-2">
+              <FieldLabel forId="about">What made you want to read?</FieldLabel>
 
               <textarea
                 id="about"
                 placeholder="Are you a reviewer, blogger, or just a sci-fi enthusiast? Tell me a bit about yourself! (Optional)"
                 rows="4"
+                class="flex min-h-20 w-full resize-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
               ></textarea>
             </div>
 
-            <p>
-              <a href="#privacy">Concerned about privacy?</a>
+            <p class="text-center text-sm">
+              <a href="#privacy" class="text-primary transition-colors hover:underline"
+                >Concerned about privacy?</a
+              >
             </p>
 
-            <button type="submit">
-              <!-- @todo Submit icon -->
+            <button
+              type="submit"
+              class="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-6 text-sm font-medium whitespace-nowrap text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            >
+              <IconSendHorizontal class="mr-2 h-4 w-4" />
               Submit Request
             </button>
           </form>
