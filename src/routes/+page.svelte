@@ -13,6 +13,8 @@
   import Testimonial from '$lib/components/Testimonial.svelte';
   import TextInput from '$lib/components/TextInput.svelte';
 
+  const netlifyFormName = 'BetaReaders';
+
   let checked = $state('gdocs');
   let expanded = $state(false);
   let submitted = $state(false);
@@ -224,12 +226,20 @@
           </div>
 
           <form
+            netlify-honeypot="favorite-cat"
             data-netlify="true"
-            name="betaReadSignup"
+            name={netlifyFormName}
             method="post"
             onsubmit={handleSubmit}
             class="space-y-6"
           >
+            <p class="hidden">
+              <label>
+                What's your favorite cat?
+                <input name="favorite-cat" type="text" />
+              </label>
+            </p>
+
             <TextInput label="Name" id="name" type="text" placeholder="Your name" required />
 
             <TextInput
@@ -285,7 +295,7 @@
               >
             </p>
 
-            <input type="hidden" name="form-name" value="betaReadSignup" />
+            <input type="hidden" name="form-name" value={netlifyFormName} />
 
             <button
               type="submit"
