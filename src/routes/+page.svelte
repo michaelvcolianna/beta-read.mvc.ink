@@ -1,5 +1,6 @@
 <script>
 	import './layout.css';
+	import BookInfo from '$lib/components/BookInfo.svelte';
 
 	let submitted = $state(false);
 </script>
@@ -25,35 +26,26 @@
 
 	<section class="w-full py-12 md:py-20">
 		<div class="section-container text-center">
-			<h1>
+			<h1
+				class="mb-4 text-gradient font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+			>
 				<span>Fragile Gamete</span>
 				<br />
 				<span>of Resistance</span>
 			</h1>
 
-			<p>by <span>Michael V. Colianna</span> (he/xe)</p>
+			<p class="mb-8 text-lg font-medium text-muted-foreground md:mb-12 md:text-xl">
+				by <span class="text-foreground">Michael V. Colianna</span> (he/xe)
+			</p>
 
-			<div>
-				<!-- @todo Make these a component -->
-				<div>
-					<!-- @todo Genre icon -->
-					<span>Adult Sci-Fi</span>
-				</div>
+			<div class="flex flex-wrap justify-center gap-4 md:gap-8">
+				<BookInfo green help="Genre" label="Adult Sci-Fi" icon="folder-open" />
 
-				<div>
-					<!-- @todo Wordcount icon -->
-					<span>110k words</span>
-				</div>
+				<BookInfo red help="Word Count" label="110k words" icon="book-open" />
 
-				<div>
-					<!-- @todo Read time icon -->
-					<span>~9 hours</span>
-				</div>
+				<BookInfo green help="Reading Time" label="~9 hours" icon="clock" />
 
-				<div>
-					<!-- @todo Timeline icon -->
-					<span>End of March</span>
-				</div>
+				<BookInfo red help="Timeline" label="End of March" icon="calendar-days" />
 			</div>
 		</div>
 	</section>
@@ -323,7 +315,7 @@
 					</footer>
 				</article>
 
-        <article>
+				<article>
 					<!-- @todo Quote icon -->
 
 					<blockquote>
