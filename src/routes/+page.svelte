@@ -1,16 +1,19 @@
 <script>
 	import './layout.css';
+
+	let submitted = $state(false);
 </script>
 
-<main>
-	<section>
+<main class="min-h-screen bg-background">
+	<section class="relative w-full overflow-hidden hero-gradient">
 		<!-- @todo Canvas with animation as bg -->
-		<div>
+		<div class="relative section-container py-8 md:py-16">
 			<figure>
 				<!-- @todo Hide image on mobile, only show figcaption & bg -->
 				<img
 					src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/"
 					alt="Illustration by Jaroslaw Marcinek"
+					class="hidden aspect-video h-auto w-full object-cover md:block"
 				/>
 
 				<figcaption>
@@ -20,8 +23,8 @@
 		</div>
 	</section>
 
-	<section>
-		<div>
+	<section class="w-full py-12 md:py-20">
+		<div class="section-container text-center">
 			<h1>
 				<span>Fragile Gamete</span>
 				<br />
@@ -55,8 +58,8 @@
 		</div>
 	</section>
 
-	<section>
-		<div>
+	<section class="w-full bg-card py-12 md:py-16">
+		<div class="section-container">
 			<div>
 				<div>
 					<p>
@@ -126,8 +129,8 @@
 		</div>
 	</section>
 
-	<section>
-		<div>
+	<section class="w-full py-12 md:py-16">
+		<div class="section-container text-center">
 			<h2>Connect with MVC</h2>
 
 			<p>Get in contact to read, or use the form below.</p>
@@ -157,108 +160,120 @@
 		</div>
 	</section>
 
-	<section>
-		<div>
-			<div>
+	<section class="w-full bg-card py-12 md:py-20">
+		<div class="section-container">
+			{#if submitted}
 				<div>
-					<h2>Sign up to Beta Read</h2>
+					<div>
+						<!-- @todo Checkmark icon -->
+					</div>
 
-					<p>Interested in being a beta reader? Fill out the form below.</p>
+					<h2>Request Received!</h2>
+
+					<p>Thank you! MVC will be in touch soon with your copy.</p>
 				</div>
-
-				<!-- @todo Netlify formify -->
-				<form>
-					<!-- @todo Make text/email fields a component -->
+			{:else}
+				<div>
 					<div>
-						<label for="name">Name <span aria-label="(Required)">*</span></label>
+						<h2>Sign up to Beta Read</h2>
 
-						<input id="name" type="text" placeholder="Your name" required />
+						<p>Interested in being a beta reader? Fill out the form below.</p>
 					</div>
 
-					<div>
-						<label for="email">Email <span aria-label="(Required)">*</span></label>
-
-						<input id="email" type="email" placeholder="you@example.com" required />
-					</div>
-
-					<div>
-						<label for="pronouns">Pronouns</label>
-
-						<input id="pronouns" type="text" placeholder="e.g., she/her, they/them (Optional)" />
-					</div>
-
-					<div>
+					<!-- @todo Netlify formify -->
+					<form>
+						<!-- @todo Make text/email fields a component -->
 						<div>
-							Preferred Way To Read &amp; Comment <span aria-label="(Required)">*</span>
+							<label for="name">Name <span aria-label="(Required)">*</span></label>
+
+							<input id="name" type="text" placeholder="Your name" required />
 						</div>
 
-						<div role="radiogroup" aria-required="true">
-							<label>
-								<button
-									type="button"
-									role="radio"
-									aria-checked="false"
-									aria-label="Google Docs"
-									value="gdocs"
-									id="delivery-gdocs"
-								></button>
-								<input type="radio" aria-hidden="true" required value="gdocs" />
-								<span>Google Docs</span>
-							</label>
+						<div>
+							<label for="email">Email <span aria-label="(Required)">*</span></label>
 
-							<label>
-								<button
-									type="button"
-									role="radio"
-									aria-checked="false"
-									aria-label="PDF"
-									value="pdf"
-									id="delivery-pdf"
-								></button>
-								<input type="radio" aria-hidden="true" required value="pdf" />
-								<span>PDF</span>
-							</label>
-
-							<label>
-								<button
-									type="button"
-									role="radio"
-									aria-checked="false"
-									aria-label="Word Doc"
-									value="word"
-									id="delivery-word"
-								></button>
-								<input type="radio" aria-hidden="true" required value="word" />
-								<span>Word Doc</span>
-							</label>
+							<input id="email" type="email" placeholder="you@example.com" required />
 						</div>
-					</div>
 
-					<div>
-						<label for="about">What made you want to read?</label>
+						<div>
+							<label for="pronouns">Pronouns</label>
 
-						<textarea
-							id="about"
-							placeholder="Are you a reviewer, blogger, or just a sci-fi enthusiast? Tell me a bit about yourself! (Optional)"
-							rows="4"
-						></textarea>
-					</div>
+							<input id="pronouns" type="text" placeholder="e.g., she/her, they/them (Optional)" />
+						</div>
 
-					<p>
-						<a href="#privacy">Concerned about privacy?</a>
-					</p>
+						<div>
+							<div>
+								Preferred Way To Read &amp; Comment <span aria-label="(Required)">*</span>
+							</div>
 
-					<button type="submit">
-						<!-- @todo Submit icon -->
-						Submit Request
-					</button>
-				</form>
-			</div>
+							<div role="radiogroup" aria-required="true">
+								<label>
+									<button
+										type="button"
+										role="radio"
+										aria-checked="false"
+										aria-label="Google Docs"
+										value="gdocs"
+										id="delivery-gdocs"
+									></button>
+									<input type="radio" aria-hidden="true" required value="gdocs" />
+									<span>Google Docs</span>
+								</label>
+
+								<label>
+									<button
+										type="button"
+										role="radio"
+										aria-checked="false"
+										aria-label="PDF"
+										value="pdf"
+										id="delivery-pdf"
+									></button>
+									<input type="radio" aria-hidden="true" required value="pdf" />
+									<span>PDF</span>
+								</label>
+
+								<label>
+									<button
+										type="button"
+										role="radio"
+										aria-checked="false"
+										aria-label="Word Doc"
+										value="word"
+										id="delivery-word"
+									></button>
+									<input type="radio" aria-hidden="true" required value="word" />
+									<span>Word Doc</span>
+								</label>
+							</div>
+						</div>
+
+						<div>
+							<label for="about">What made you want to read?</label>
+
+							<textarea
+								id="about"
+								placeholder="Are you a reviewer, blogger, or just a sci-fi enthusiast? Tell me a bit about yourself! (Optional)"
+								rows="4"
+							></textarea>
+						</div>
+
+						<p>
+							<a href="#privacy">Concerned about privacy?</a>
+						</p>
+
+						<button type="submit">
+							<!-- @todo Submit icon -->
+							Submit Request
+						</button>
+					</form>
+				</div>
+			{/if}
 		</div>
 	</section>
 
-	<section>
-		<div>
+	<section class="w-full bg-card py-12 md:py-20">
+		<div class="section-container">
 			<div>
 				<h2>Praise &amp: Reactions</h2>
 
@@ -273,6 +288,43 @@
 				<!-- @todo Make these a component -->
 				<article>
 					<!-- @todo Quote icon -->
+					<blockquote>
+						When I tell you that I cried my eyes out, please know that very few books have ever done
+						that. I’ve got a very high tolerance for grief and sadness. Your story will haunt me for
+						months, and I can't wait to see it published.
+					</blockquote>
+
+					<footer>
+						<div>
+							<cite
+								><a href="https://bsky.app/profile/juliebihn.bsky.social">@juliebihn.bsky.social</a
+								>, author of <em>Titanic Voyage</em></cite
+							>
+
+							<p>For <em>Fragile Gamete of Resistance</em></p>
+						</div>
+					</footer>
+				</article>
+
+				<article>
+					<!-- @todo Quote icon -->
+
+					<blockquote>
+						Holy crap, man. Are you okay? Because that ending really worries me. I mean... it’s
+						phenomenal. But you should see a therapist.
+					</blockquote>
+
+					<footer>
+						<div>
+							<cite>bookish_nova (Discord), reader</cite>
+
+							<p>For <em>Fragile Gamete of Resistance</em></p>
+						</div>
+					</footer>
+				</article>
+
+        <article>
+					<!-- @todo Quote icon -->
 
 					<blockquote>
 						You’re a very good writer, but this was way too woke for me to read.
@@ -280,9 +332,9 @@
 
 					<footer>
 						<div>
-							<cite>Creigh Maxfield</cite>
+							<cite>Creigh Maxfield, reader</cite>
 
-							<p>About <em>Fractured Children of Earth</em></p>
+							<p>For <em>Fractured Children of Earth</em></p>
 						</div>
 					</footer>
 				</article>
@@ -297,43 +349,12 @@
 
 					<footer>
 						<div>
-							<cite>K.A. Doore</cite>
+							<cite
+								><a href="https://kadoore.com/">K.A. Doore</a>, author of
+								<em>The Chronicles of Ghadid</em> trilogy</cite
+							>
 
 							<p>For <em>Fractured Children of Earth</em></p>
-						</div>
-					</footer>
-				</article>
-
-				<article>
-					<!-- @todo Quote icon -->
-
-					<blockquote>
-						Holy crap, man. Are you okay? Because that ending really worries me.
-					</blockquote>
-
-					<footer>
-						<div>
-							<cite>@juliebihn.bsky.social</cite>
-
-							<p>For <em>Fragile Gamete of Resistance</em></p>
-						</div>
-					</footer>
-				</article>
-
-				<article>
-					<!-- @todo Quote icon -->
-
-					<blockquote>
-						When I tell you that I cried my eyes out, please know that very few books have ever done
-						that. I’ve got a very high tolerance for grief and sadness. Your story will haunt me for
-						months, and I can't wait to see it published.
-					</blockquote>
-
-					<footer>
-						<div>
-							<cite>bookish_nova (Discord)</cite>
-
-							<p>For <em>Fragile Gamete of Resistance</em></p>
 						</div>
 					</footer>
 				</article>
@@ -341,8 +362,8 @@
 		</div>
 	</section>
 
-	<section>
-		<div>
+	<section class="w-full py-12 md:py-20">
+		<div class="section-container">
 			<div>
 				<div>
 					<div>
@@ -404,12 +425,12 @@
 		</div>
 	</section>
 
-	<footer id="privacy">
-		<div>
-			<div>
-				<h3>Privacy Policy</h3>
+	<footer id="privacy" class="w-full scroll-mt-8 bg-muted/30 py-10 md:py-16">
+		<div class="section-container">
+			<div class="mx-auto max-w-2xl text-center">
+				<h3 class="mb-4 font-display text-lg font-semibold text-foreground">Privacy Policy</h3>
 
-				<div>
+				<div class="space-y-3 text-sm text-muted-foreground">
 					<p>
 						Your privacy matters. Information submitted through this site is used solely by MVC to
 						communicate directly with you about this book. Your data is never saved to any
@@ -423,7 +444,7 @@
 					</p>
 				</div>
 
-				<div>
+				<div class="mt-8 border-t border-border pt-6 text-xs text-muted-foreground">
 					<p>© 2026 MVC. All rights reserved.</p>
 				</div>
 			</div>
