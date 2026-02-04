@@ -3,7 +3,8 @@
   import BookInfo from '$lib/components/BookInfo.svelte';
   import ContentWarning from '$lib/components/ContentWarning.svelte';
   import FieldLabel from '$lib/components/FieldLabel.svelte';
-  import HeroBackground from '$lib/components/HeroBackground.svelte';
+  // import HeroBackground from '$lib/components/HeroBackground.svelte';
+  import HeroSpaceBackground from '$lib/components/HeroSpaceBackground.svelte';
   import IconChevronDown from '$lib/components/Icons/ChevronDown.svelte';
   import IconCircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
   import IconSendHorizontal from '$lib/components/Icons/SendHorizontal.svelte';
@@ -45,7 +46,7 @@
 
 <main class="min-h-screen bg-background">
   <section class="relative w-full overflow-hidden hero-gradient">
-    <HeroBackground />
+    <HeroSpaceBackground />
 
     <div class="relative section-container py-8 md:py-16">
       <figure class="relative overflow-hidden rounded-lg md:rounded-2xl">
