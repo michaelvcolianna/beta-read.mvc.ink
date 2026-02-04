@@ -372,9 +372,8 @@
         <Testimonial>
           {#snippet quote()}
             For a first draft, I really appreciate the care you took with the words. I read a lot of
-            drafts where the author throws in casual fatphobia or ableist language, so it was a nice
-            refresher to see multiple fat characters where that's just a descriptor and multiple
-            disabled characters who don't need to be fixed.
+            drafts where the author throws in ableist language, so it was a nice refresher to see
+            multiple disabled characters who don't need to be fixed.
           {/snippet}
 
           {#snippet author()}
