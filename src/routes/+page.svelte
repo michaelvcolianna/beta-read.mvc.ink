@@ -389,7 +389,7 @@
             <p>
               Next to Davi, his partner and co-captain, Mary, rubbed her lower back. She wore her
               usual red coat and had her black hair in a bun. Whether she realized it or not, she
-              grumbled slightly then typed something on her wrist computer.
+              grumbled slightly, then she typed something on her wrist computer.
             </p>
 
             <p>
@@ -397,6 +397,7 @@
               heads-up-display (or, hud, for short). A box popped up on the right side of the screen
               with Mary’s message.
             </p>
+
             <p>[I really hope we won’t have to do any more injections,] her chat read.</p>
 
             <p>Davi replied with an exaggerated sign for, “Me too.”</p>
