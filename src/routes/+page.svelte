@@ -318,8 +318,9 @@
         </h2>
 
         <p class="text-muted-foreground">
-          Some things others readers have said about their beta read, or about MVC’s first book, <a
-            href="/">Fractured Children or Earth</a
+          Some things readers have said about their beta read, or about MVC’s first book, <a
+            href="https://bookshop.org/p/books/fractured-children-of-earth-michael-v-colianna/187fde3f7ab8190f"
+            class="font-medium underline">Fractured Children of Earth</a
           >.
         </p>
       </div>
@@ -347,6 +348,37 @@
 
           {#snippet author()}
             bookish_nova (Discord), reader
+          {/snippet}
+
+          {#snippet role()}
+            For <em>Fragile Gamete of Resistance</em>
+          {/snippet}
+        </Testimonial>
+
+        <Testimonial>
+          {#snippet quote()}
+            OK... I need the follow up to this like right now. You can't leave me hanging like that!
+          {/snippet}
+
+          {#snippet author()}
+            PinkCupcake (Discord), reader
+          {/snippet}
+
+          {#snippet role()}
+            For <em>Fragile Gamete of Resistance</em>
+          {/snippet}
+        </Testimonial>
+
+        <Testimonial>
+          {#snippet quote()}
+            For a first draft, I really appreciate the care you took with the words. I read a lot of
+            drafts where the author throws in casual fatphobia or ableist language, so it was a nice
+            refresher to see multiple fat characters where that's just a descriptor and multiple
+            disabled characters who don't need to be fixed.
+          {/snippet}
+
+          {#snippet author()}
+            Klara (Discord), reader
           {/snippet}
 
           {#snippet role()}
