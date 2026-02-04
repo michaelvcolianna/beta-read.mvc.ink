@@ -3,8 +3,7 @@
   import BookInfo from '$lib/components/BookInfo.svelte';
   import ContentWarning from '$lib/components/ContentWarning.svelte';
   import FieldLabel from '$lib/components/FieldLabel.svelte';
-  // import HeroBackground from '$lib/components/HeroBackground.svelte';
-  import HeroSpaceBackground from '$lib/components/HeroSpaceBackground.svelte';
+  import HeroBackground from '$lib/components/HeroBackground.svelte';
   import IconChevronDown from '$lib/components/Icons/ChevronDown.svelte';
   import IconCircleCheckBig from '$lib/components/Icons/CircleCheckBig.svelte';
   import IconSendHorizontal from '$lib/components/Icons/SendHorizontal.svelte';
@@ -45,8 +44,8 @@
 </svelte:head>
 
 <main class="min-h-screen bg-background">
-  <section class="relative w-full overflow-hidden hero-gradient">
-    <HeroSpaceBackground />
+  <section class="relative w-full overflow-hidden bg-card-foreground">
+    <HeroBackground />
 
     <div class="relative section-container py-8 md:py-16">
       <figure class="relative overflow-hidden rounded-lg md:rounded-2xl">
@@ -66,7 +65,7 @@
         />
 
         <figcaption class="text-center md:bg-foreground md:p-6">
-          <p class="text-sm font-medium text-foreground md:text-base md:text-primary-foreground">
+          <p class="text-sm font-medium text-primary-foreground md:text-base">
             BETA READERS NEEDED
           </p>
         </figcaption>
