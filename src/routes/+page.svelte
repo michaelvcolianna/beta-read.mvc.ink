@@ -33,14 +33,21 @@
       .then(() => (submitted = true))
       .catch((error) => console.log('form submit error:', error));
   };
+
+  const pageTitle = 'Beta Readers Needed: Fragile Gamete of Resistance by Michael V. Colianna';
+  const pageDescription =
+    'Information and signup form to beta read Michael V. Colianna’s book, “Fragile Gamete of Resistance” – an adult science-fiction novel featuring a Deaf main character and infertility awareness.';
+  const pageCard = 'https://assets.mvc.ink/f/1020547/1249x816/8988ad96dd/fgor-card.jpg/m/1200x0';
 </script>
 
 <svelte:head>
-  <title>Beta Readers Needed: Fragile Gamete of Resistance by Michael V. Colianna</title>
-  <meta
-    name="description"
-    content="Information and signup form to beta read Michael V. Colianna’s book, “Fragile Gamete of Resistance”."
-  />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:url" content="https://beta-read.mvc.ink" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:image" content={pageCard} />
 </svelte:head>
 
 <main class="min-h-screen bg-background">
