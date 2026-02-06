@@ -25,28 +25,28 @@
 
     <div class={['flex', 'flex-wrap', 'justify-center', 'gap-4']}>
       <SocialLink
-        help="Connect on Bluesky"
+        help="Connect on"
         href="https://bsky.app/profile/mvc.ink"
         Icon={IconBluesky}
         label="Bluesky"
       />
 
       <SocialLink
-        help="Connect on Discord"
+        help="Connect on"
         href="http://discord.com/users/740751379571933265"
         Icon={IconDiscord}
         label="Discord"
       />
 
       <SocialLink
-        help="Visit MVC's Website"
+        help="Visit MVC's"
         href="https://mvc.ink"
         Icon={IconGlobe}
         label="Website"
       />
 
       <SocialLink
-        help="Send MVC an Email"
+        help="Send MVC an"
         href="mailto:info@mvc.ink"
         Icon={IconMail}
         label="Email"
