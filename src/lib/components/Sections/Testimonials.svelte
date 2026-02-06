@@ -39,18 +39,6 @@
         reader="bookish_nova (Discord)"
         quote="Holy crap, man. Are you okay? Because that ending really worries me. I mean... it’s phenomenal. But you should see a therapist."
       />
-
-      <Testimonial
-        book="Fragile Gamete of Resistance"
-        reader="PinkCupcake (Discord)"
-        quote="OK... I need the follow up to this like right now. You can't leave me hanging like that!"
-      />
-
-      <Testimonial
-        book="Fragile Gamete of Resistance"
-        reader="Klara (Discord)"
-        quote="For a first draft, I really appreciate the care you took with the words. I read a lot of drafts where the author throws in ableist language without realizing it, so it was a nice refresher to see multiple disabled characters who don't need to be fixed."
-      />
     </div>
   </div>
 </section>
