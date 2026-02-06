@@ -8,7 +8,7 @@
   const pageDescription =
     'Signup form to beta read Michael V. Colianna’s book, “Fragile Gamete of Resistance” – adult science-fiction featuring a Deaf main character and infertility awareness.';
   const pageCard =
-    'https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/1200x630';
+    'https://assets.mvc.ink/f/1020547/1200x630/267af35d27/beta-read-card.jpg/m/';
 </script>
 
 <svelte:head>
