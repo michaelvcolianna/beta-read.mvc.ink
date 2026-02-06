@@ -15,7 +15,7 @@
           https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/698x0 698w,
           https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x0 824w"
         src="https://assets.mvc.ink/f/1020547/1249x694/4189936aab/jaroslaw-marcinek-2209-40.jpg/m/824x0"
-        alt="Illustration by Jaroslaw Marcinek"
+        alt="Illustration of several battle-hardened resistance fighters in front of a space ship (by Jaroslaw Marcinek)"
         fetchpriority="high"
         height="458"
         width="824"
