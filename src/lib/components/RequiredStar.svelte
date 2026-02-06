@@ -1,1 +1,1 @@
-<span aria-label="(Required)" class="text-accent">*</span>
+<span aria-label="(Required)" class={['text-accent']}>*</span>
